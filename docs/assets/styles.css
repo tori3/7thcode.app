@@ -38,6 +38,12 @@ a:focus-visible, button:focus-visible { outline: 3px solid #74a3ff; outline-offs
 .site-header nav, footer nav { display: flex; align-items: center; gap: 30px; }
 .site-header nav a, footer nav a { color: var(--muted); text-decoration: none; font-weight: 620; font-size: 14px; }
 .site-header nav a:hover, footer nav a:hover { color: var(--blue); }
+.language-switch { display: inline-flex; align-items: center; padding: 3px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); flex: 0 0 auto; }
+.language-switch a { min-width: 38px; padding: 5px 8px; border-radius: 6px; color: var(--muted); font-size: 11px; font-weight: 760; line-height: 1.2; text-align: center; text-decoration: none; }
+.language-switch a[aria-current="page"] { background: var(--ink); color: white; }
+.language-switch a:not([aria-current="page"]):hover { color: var(--blue); }
+html[lang="ja"] body { font-family: Inter, "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, ui-sans-serif, sans-serif; }
+html[lang="ja"] h1 { letter-spacing: -.045em; line-height: 1.08; }
 
 .hero { display: grid; grid-template-columns: 1.18fr .82fr; gap: clamp(48px, 8vw, 116px); align-items: center; min-height: 680px; padding-block: 92px; }
 .eyebrow { margin: 0 0 18px; color: var(--blue); text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 800; }
@@ -68,18 +74,7 @@ h1 { margin-bottom: 30px; font-size: clamp(54px, 7vw, 92px); line-height: .96; l
 .card-index { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--blue); font-size: 12px; }
 .policy-card h2 { margin: 48px 0 12px; font-size: 34px; letter-spacing: -.045em; }
 .policy-card p { color: var(--muted); }
-.policy-card a, .product-list a, .text-link { margin-top: auto; color: var(--blue); font-weight: 740; text-decoration: none; }
-
-.product-section { padding-block: 150px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; }
-.product-section h2 { font-size: clamp(36px, 4.5vw, 58px); line-height: 1.05; letter-spacing: -.055em; }
-.product-list { display: grid; gap: 18px; }
-.product-list article { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
-.product-heading { display: flex; gap: 15px; align-items: center; margin-bottom: 20px; }
-.product-heading h3 { margin: 0; font-size: 20px; }
-.product-heading p { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
-.product-mark { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px; background: var(--blue); color: white; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 800; }
-.product-mark.muted { background: var(--warm); color: #674e18; }
-.product-list > article > p { color: var(--muted); }
+.policy-card a, .text-link { margin-top: auto; color: var(--blue); font-weight: 740; text-decoration: none; }
 
 .document-page { padding-bottom: 130px; }
 .document-hero { padding-block: 110px 86px; border-bottom: 1px solid var(--line); }
@@ -93,6 +88,10 @@ h1 { margin-bottom: 30px; font-size: clamp(54px, 7vw, 92px); line-height: .96; l
 .document-aside hr { border: 0; border-top: 1px solid var(--line); width: 100%; margin: 20px 0; }
 .aside-label { color: var(--blue); text-transform: uppercase; letter-spacing: .12em; font-size: 11px; font-weight: 800; margin-bottom: 3px; }
 .aside-note { margin-top: 18px; font-size: 11px; }
+.contact-note { margin-top: 24px; color: var(--muted); font-size: 14px; }
+.contact-note a { color: var(--blue); font-weight: 700; text-decoration: none; }
+.fine-print { margin-top: 30px; color: var(--muted) !important; font-size: 13px !important; line-height: 1.65 !important; }
+.fine-print strong { color: var(--ink); }
 .document-aside.toc a { color: var(--muted); text-decoration: none; padding: 4px 0; }
 .document-aside.toc a:hover { color: var(--blue); }
 .document-content section { padding-bottom: 54px; margin-bottom: 54px; border-bottom: 1px solid var(--line); scroll-margin-top: 110px; }
@@ -124,7 +123,6 @@ footer p { color: #a9b9d9; margin: 12px 0 0; font-size: 13px; }
   .assurance-panel { min-height: 360px; }
   .policy-grid { grid-template-columns: 1fr; }
   .policy-card + .policy-card { border-left: 0; border-top: 1px solid var(--line); }
-  .product-section { grid-template-columns: 1fr; gap: 38px; padding-block: 100px; }
   .document-layout { grid-template-columns: 1fr; }
   .document-aside { position: static; grid-template-columns: repeat(2, 1fr); }
   .document-aside .aside-label, .document-aside hr, .document-aside .aside-note { grid-column: 1 / -1; }
@@ -138,9 +136,10 @@ footer p { color: #a9b9d9; margin: 12px 0 0; font-size: 13px; }
 
 @media (max-width: 560px) {
   .wrap { width: min(100% - 28px, 1160px); }
-  .nav-wrap { min-height: 68px; }
-  .site-header nav { gap: 10px; }
+  .nav-wrap { min-height: 68px; flex-wrap: wrap; padding-block: 10px; gap: 10px 16px; }
+  .site-header nav { order: 3; width: 100%; justify-content: space-between; gap: 8px; }
   .site-header nav a { font-size: 11px; }
+  .language-switch { margin-left: auto; }
   .brand { font-size: 0; }
   .hero { min-height: auto; }
   h1 { font-size: 48px; }
