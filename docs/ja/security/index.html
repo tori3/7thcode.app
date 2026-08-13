@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>セキュリティポリシー | 7thcode</title><meta name="description" content="7thcodeの製品・サービスに共通するセキュリティ方針と脆弱性報告手順。">
+  <link rel="canonical" href="https://trust.7thcode.app/ja/security/"><link rel="alternate" hreflang="en" href="https://trust.7thcode.app/security/"><link rel="alternate" hreflang="ja" href="https://trust.7thcode.app/ja/security/"><link rel="alternate" hreflang="x-default" href="https://trust.7thcode.app/security/"><meta property="og:locale" content="ja_JP"><meta property="og:title" content="7thcode セキュリティポリシー"><meta property="og:description" content="セキュリティ方針と脆弱性を非公開で報告する方法。"><meta property="og:image" content="https://trust.7thcode.app/assets/og.png"><meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="wrap nav-wrap"><a class="brand" href="/ja/" aria-label="7thcode トラスト＆サポート ホーム"><span class="brand-mark" aria-hidden="true">7</span><span>7thcode</span></a><nav aria-label="メインナビゲーション"><a href="/ja/support/">サポート</a><a href="/ja/security/" aria-current="page">セキュリティ</a><a href="/ja/privacy/">プライバシー</a><a href="/ja/terms/">利用規約</a></nav><div class="language-switch" aria-label="言語"><a href="/security/" lang="en">EN</a><a href="/ja/security/" lang="ja" aria-current="page">日本語</a></div></div></header>
+  <main id="main" class="document-page">
+    <header class="document-hero compact wrap"><p class="eyebrow">セキュリティポリシー</p><h1>セキュリティ上の懸念は<br>非公開でご報告ください。</h1><p class="lede">7thcodeの製品・サービスに共通するセキュリティ方針と、責任ある情報開示の手順を定めています。</p><p class="effective">2026年8月13日施行 · 公開者名：7thcode</p></header>
+    <div class="document-layout wrap">
+      <aside class="document-aside toc"><p class="aside-label">このページの内容</p><a href="#report">報告方法</a><a href="#testing">テストの条件</a><a href="#baseline">基本方針</a><a href="#response">対応と是正</a><a href="#limits">制限事項</a></aside>
+      <article class="document-content legal-copy">
+        <section id="report"><h2>1. 脆弱性の報告</h2><p><a href="mailto:support@7thcode.app?subject=Security%20report%20for%207thcode">非公開のセキュリティ報告窓口</a>を使用し、件名を<strong>Security report: [製品名]</strong>としてください。対象製品とバージョン、想定される影響、安全な再現手順、顧客データへの影響の有無を記載してください。公開の課題として投稿せず、認証情報、アクセストークン、非公開の識別子、顧客の機密情報、実際の顧客データを含めないでください。機微な証拠が必要な場合は、より安全な方法を調整します。</p></section>
+        <section id="testing"><h2>2. テストの条件</h2><p>ご自身が所有する、または明示的にテストを許可されたアカウント、サイト、プロジェクト、ワークスペース、データのみを使用してください。テストは必要な範囲に限定し、アクセス、変更、保持を最小限にしてください。他者のデータに遭遇した場合や意図しないアクセスを得た場合は、直ちに中止して非公開で報告してください。</p><p>書面による許可なく、サービス拒否・負荷テスト、ソーシャルエンジニアリング、フィッシング、マルウェア配布、物理攻撃、認証情報への攻撃、破壊的テスト、プライバシー侵害、データ持ち出し、顧客の本番環境に対するテストを行わないでください。提供者が調査と是正を行う合理的な機会を得る前に、疑いのある問題を公開しないでください。本ガイドラインは、違法な行為または適用される契約で禁止された行為を許可するものではありません。</p></section>
+        <section id="baseline"><h2>3. 共通のセキュリティ方針</h2><ul><li>機能の提供に必要な最小限の権限とデータのみを使用します。</li><li>合理的に可能な場合はプラットフォーム内または自ら管理する処理を優先し、必要に応じてホスティング、外部接続、サービス提供者を開示します。</li><li>認証情報と顧客の機密情報を、運用ログや通常のサポート連絡に含めないようにします。</li><li>製品とそのリスクに応じて、依存関係の固定、自動検証、コードレビュー、リリース確認を行います。</li><li>信頼できる報告を調査し、重大度、実現可能性、契約上・プラットフォーム上の義務に応じて修正または軽減策を提供します。</li></ul><p>製品ドキュメントに別段の記載がない限り、公式な提供経路から取得した対応対象バージョンのみが対象です。</p></section>
+        <section id="response"><h2>4. 対応と是正</h2><p>報告は主として日本の営業日に、日本語で合理的に可能な範囲で確認します。受領確認、追加情報の依頼、再現、重大度評価、修正または軽減策の準備、公開時期の調整を行う場合があります。セキュリティとデータ完全性に関するリスクを可能な限り優先しますが、受領確認、修正、公開、復旧、情報開示の期限は保証しません。製品ドキュメントに法的拘束力のない目標を記載する場合があります。</p><p>テスト開始前に書面で合意した場合を除き、金銭的なバグ報奨金制度はありません。報告の提出により、契約、雇用関係、支払請求権、氏名掲載義務が生じるものではありません。</p></section>
+        <section id="limits"><h2>5. セキュリティ上の制限</h2><p>ソフトウェア、ホスティング、通信、保存のいずれも完全な安全性を保証できません。本ポリシーは、認証、監査報告、保証、保険、セーフハーバーの約束、または特定の信頼・報奨金・認証プログラムへの参加表明ではありません。サービスの利用には<a href="/ja/terms/">利用規約</a>が適用されます。</p></section>
+      </article>
+    </div>
+  </main>
+  <footer><div class="wrap footer-grid"><div><a class="brand footer-brand" href="/ja/"><span class="brand-mark" aria-hidden="true">7</span><span>7thcode</span></a></div><nav aria-label="フッターナビゲーション"><a href="/ja/support/">サポート</a><a href="/ja/security/">セキュリティ</a><a href="/ja/privacy/">プライバシー</a><a href="/ja/terms/">利用規約</a></nav><p class="copyright">© 2026 7thcode. All rights reserved.</p></div></footer>
+</body>
+</html>
