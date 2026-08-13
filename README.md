@@ -4,11 +4,11 @@ Dependency-free public pages for 7thcode Atlassian Marketplace apps.
 
 ## Published routes
 
-- `https://7thcode.app/`
-- `https://7thcode.app/support/`
-- `https://7thcode.app/security/`
-- `https://7thcode.app/privacy/`
-- `https://7thcode.app/terms/`
+- `https://trust.7thcode.app/`
+- `https://trust.7thcode.app/support/`
+- `https://trust.7thcode.app/security/`
+- `https://trust.7thcode.app/privacy/`
+- `https://trust.7thcode.app/terms/`
 
 The complete site is under `docs/` so GitHub Pages can publish directly from
 the `main` branch and `/docs` folder without a custom build workflow.
@@ -18,13 +18,13 @@ the `main` branch and `/docs` folder without a custom build workflow.
 1. Open **Settings → Pages** in the repository.
 2. Choose **Deploy from a branch**.
 3. Select `main` and `/docs`, then save.
-4. Set the custom domain to `7thcode.app` and enable HTTPS after the certificate is ready.
+4. Set the custom domain to `trust.7thcode.app` and enable HTTPS after the certificate is ready.
 
 ## DNS
 
-Configure the apex domain with GitHub Pages A and AAAA records, and point
-`www` directly to the repository owner’s `<owner>.github.io` domain. Keep the
-GitHub domain-verification TXT record and do not create wildcard records.
+Create a DNS-only CNAME record from `trust` to `tori3.github.io`. Keep the apex
+domain available for the main 7thcode site, keep the GitHub domain-verification
+TXT record, and do not create wildcard records.
 
 The exact current records are documented by GitHub:
 https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
