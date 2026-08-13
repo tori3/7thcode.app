@@ -1,0 +1,6 @@
+# This repository publishes only the dependency-free GitHub Pages source.
+/*
+!/.gitignore
+!/README.md
+!/docs/
+!/docs/**
